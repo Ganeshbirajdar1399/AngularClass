@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './pipe.component.css'
 })
 export class PipeComponent {
-
+firstName = 'Anand'
+// currency = 3000
+date = new Date()
 }

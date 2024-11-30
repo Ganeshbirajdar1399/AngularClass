@@ -1,1 +1,20 @@
-<p>parent works!</p>
+<div class="container-fluid">
+    <h3>Parent Works!</h3>
+    <p>----- Parent To Child ------</p>
+    <p>1. Name of student is: {{ username }}</p>
+    <p>2. Array:{{ arrNumber }}</p>
+    <p>3. <input type="text" [(ngModel)]="stringValue" /></p>
+   <button class="btn btn-primary ms-3" (click)="sendValue()">Send value</button>
+    <hr />
+    <h4>From Child To Parent</h4>
+    <p>data from child component: <u>{{fromChild}}</u></p>
+    <hr />
+    <hr />
+    <app-child
+      [firstName]="username"
+      [arrayNumber]="arrNumber"
+      [string]="value"
+      (sendToParent)="receiveFromChild($event)"
+    ></app-child>
+  </div>
+  
