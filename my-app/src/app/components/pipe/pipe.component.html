@@ -1,0 +1,14 @@
+<!-- Pipes are used to transform the value without change original value-->
+ <!--1. inbuilt pipe-->
+ <!--2.customs pipe-->
+ <!--3. third party pipe-->
+ <h4>Inbuilt Pipes</h4>
+ <p>Name Of student is:- {{firstName | uppercase}}</p>
+ <p>Name Of student is:- {{firstName | lowercase}}</p>
+ <p>Total Rupees : {{445 | currency : "INR"}}</p>
+ <p>Total Rupees : {{5.75765 | number : "3.1-1"}}</p>
+ <div>Date: {{date | date: 'yyyy'}}/{{date | date:'MM'}}/{{date | date: 'dd'}}</div>
+ <p>Date: {{date}}</p>
+ <h4>Custom Pipes</h4>
+ <p>Square: {{6 | square}}</p>
+ 

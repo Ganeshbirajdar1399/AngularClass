@@ -1,21 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { FormsModule } from '@angular/forms';
+import { StyledirectveDirective } from './directives/styledirectve.directive';
 import { DataBindComponent } from './components/data-bind/data-bind.component';
 import { DirectiveComponent } from './components/directive/directive.component';
 import { PipeComponent } from './components/pipe/pipe.component';
+import { SquarePipe } from './pipes/square.pipe';
 import { ParentComponent } from './components/parent/parent.component';
 import { ChildComponent } from './components/child/child.component';
-import { StyledirectveDirective } from './directives/styledirectve.directive';
-import { SquarePipe } from './square.pipe';
-
-
-
-
 
 
 
@@ -24,12 +19,11 @@ import { SquarePipe } from './square.pipe';
     AppComponent,
     DataBindComponent,
     DirectiveComponent,
+    StyledirectveDirective,
     PipeComponent,
+    SquarePipe,
     ParentComponent,
     ChildComponent,
-    StyledirectveDirective,
-    SquarePipe,
-
   ],
   imports: [
     BrowserModule,

@@ -53,8 +53,8 @@ export class DirectiveComponent {
     this.showValue = !this.showValue;
   }
 
-  // showName(){
-  //   console.log(this.playerName);
-  // }
+  showName(){
+    console.log(this.playerName);
+  }
 
 }
