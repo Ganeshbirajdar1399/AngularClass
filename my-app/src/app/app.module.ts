@@ -8,8 +8,8 @@ import { ChildComponent } from './components/child/child.component';
 import { ParentComponent } from './components/parent/parent.component';
 import { DirectiveComponent } from './components/directive/directive.component';
 import { PipeComponent } from './components/pipe/pipe.component';
-import { PipesPipe } from './pipes.pipe';
-import { DirectivesDirective } from './directives.directive';
+import { PipesPipe } from './pipe/pipes.pipe';
+import { DirectivesDirective } from './directives/directives.directive';
 
 @NgModule({
   declarations: [

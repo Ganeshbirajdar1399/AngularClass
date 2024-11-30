@@ -1,4 +1,4 @@
-import { DirectivesDirective } from './directives.directive';
+import { DirectivesDirective } from '../directives.directive';
 
 describe('DirectivesDirective', () => {
   it('should create an instance', () => {
