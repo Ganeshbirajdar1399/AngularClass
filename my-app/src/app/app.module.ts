@@ -3,10 +3,24 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DataBindComponent } from './components/data-bind/data-bind.component';
+import { ChildComponent } from './components/child/child.component';
+import { ParentComponent } from './components/parent/parent.component';
+import { DirectiveComponent } from './components/directive/directive.component';
+import { PipeComponent } from './components/pipe/pipe.component';
+import { PipesPipe } from './pipes.pipe';
+import { DirectivesDirective } from './directives.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DataBindComponent,
+    ChildComponent,
+    ParentComponent,
+    DirectiveComponent,
+    PipeComponent,
+    PipesPipe,
+    DirectivesDirective
   ],
   imports: [
     BrowserModule,
