@@ -10,6 +10,8 @@ import { DirectiveComponent } from './components/directive/directive.component';
 import { PipeComponent } from './components/pipe/pipe.component';
 import { ParentComponent } from './components/parent/parent.component';
 import { ChildComponent } from './components/child/child.component';
+import { StyledirectveDirective } from './directives/styledirectve.directive';
+import { SquarePipe } from './square.pipe';
 
 
 
@@ -25,6 +27,8 @@ import { ChildComponent } from './components/child/child.component';
     PipeComponent,
     ParentComponent,
     ChildComponent,
+    StyledirectveDirective,
+    SquarePipe,
 
   ],
   imports: [
