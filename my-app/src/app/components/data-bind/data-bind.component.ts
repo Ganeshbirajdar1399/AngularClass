@@ -17,7 +17,7 @@ export class DataBindComponent {
   lake = false;
   tree = false;
 
-  username: string = 'virat@123';
+  username: string = 'virat@kohli'
   playername: string = 'Virat Kohli';
   runs: number = 10000;
   innings: number = 204;

@@ -13,8 +13,14 @@ export class DirectiveComponent {
   showValue = true;
 
   players: string[] = ['Dhoni', 'Rohit', 'Virat', 'Sachin'];
+  students = [
+    {Name: 'Anand', Role:'Developer'},
+    {Name: 'Adarsh', Role:'MEAN Stack'},
+    {Name: 'Swati', Role:'MERN Developer'},
+    {Name: 'Mahesh', Role:'React Stack'},
+  ]
 
-  playerName = 'Sachin';
+  playerName = 'Dhoni';
 
   //ngClass
   myClass = {
@@ -47,6 +53,7 @@ export class DirectiveComponent {
     'padding': '5px',
     'margin': '5px 5px',
   };
+ngSwitch: any;
 //end ngStyle
 
   changeColor() {

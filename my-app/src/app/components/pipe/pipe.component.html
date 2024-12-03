@@ -2,13 +2,17 @@
  <!--1. inbuilt pipe-->
  <!--2.customs pipe-->
  <!--3. third party pipe-->
- <h4>Inbuilt Pipes</h4>
- <p>Name Of student is:- {{firstName | uppercase}}</p>
- <p>Name Of student is:- {{firstName | lowercase}}</p>
- <p>Total Rupees : {{445 | currency : "INR"}}</p>
- <p>Total Rupees : {{5.75765 | number : "3.1-1"}}</p>
- <div>Date: {{date | date: 'yyyy'}}/{{date | date:'MM'}}/{{date | date: 'dd'}}</div>
- <p>Date: {{date}}</p>
+ <h3 class="text-primary text-center">Inbuilt Pipes</h3>
+ <hr>
+ <p>Name Of student is: <i>{{firstName | uppercase}}</i> </p>
+ <p>Name Of student is: <i>{{firstName | lowercase}}</i> </p>
+ <p>Total Rupees : <i>{{445 | currency : "INR"}}</i> </p>
+ <p>Total Rupees : <i>{{5.75765 | number : "3.1-1"}}</i> </p>
+ <p>Date: <i>{{date | date: 'yyyy'}}/{{date | date:'MM'}}/{{date | date: 'dd'}}</i> </p>
+ <p>Date: <i>{{date}}</i> </p>
+ <hr>
+ <h3 class="text-primary text-center">Custom Pipes</h3>
+ <hr>
  <h4>Custom Pipes</h4>
- <p>Square: {{6 | square}}</p>
- 
+ <p>Square of 6 : <i>{{6 | square}}</i> </p>
+ <hr>

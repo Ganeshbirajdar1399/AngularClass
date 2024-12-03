@@ -12,6 +12,7 @@ export class ChildComponent {
   @Input() firstName = '';
   @Input() arrayNumber: number[] = [];
   @Input() string = '';
+  @Input() fromParent = ''
 
   //@output => child to parent
   @Output() sendToParent = new EventEmitter();

@@ -7,13 +7,16 @@
    <button class="btn btn-primary ms-3" (click)="sendValue()">Send value</button>
     <hr />
     <h4>From Child To Parent</h4>
-    <p>data from child component: <u>{{fromChild}}</u></p>
+    <p><input type="text" [(ngModel)]="sendtochild"></p>
+    <button class="btn btn-primary" (click)="sendToChild()">Send to child</button>
     <hr />
+    <p> <b>This text recive from child: <u><i>{{fromChild}}</i></u> </b></p>
     <hr />
     <app-child
       [firstName]="username"
       [arrayNumber]="arrNumber"
       [string]="value"
+      [fromParent]="value2"
       (sendToParent)="receiveFromChild($event)"
     ></app-child>
   </div>
