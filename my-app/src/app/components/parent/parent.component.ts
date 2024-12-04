@@ -10,20 +10,20 @@ export class ParentComponent {
   username = 'Anand';
   arrNumber = [1, 2, 3, 4];
   value = '';
-  value2 ='';
+  value2 = '';
   stringValue = '';
-  fromChild = ''
+  fromChild = '';
 
-  sendtochild = ''
+  sendtochild = '';
 
   sendValue() {
     this.value = this.stringValue;
   }
-  sendToChild(){
-    this.value2 = this.sendtochild
+  sendToChild() {
+    this.value2 = this.sendtochild;
   }
-  receiveFromChild(text:string){
-console.log(text, 'text form child')
-this.fromChild = text
+  receiveFromChild(text: string) {
+    console.log(text, 'text form child');
+    this.fromChild = text;
   }
 }

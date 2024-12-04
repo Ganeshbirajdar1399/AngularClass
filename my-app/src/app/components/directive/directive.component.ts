@@ -14,11 +14,11 @@ export class DirectiveComponent {
 
   players: string[] = ['Dhoni', 'Rohit', 'Virat', 'Sachin'];
   students = [
-    {Name: 'Anand', Role:'Developer'},
-    {Name: 'Adarsh', Role:'MEAN Stack'},
-    {Name: 'Swati', Role:'MERN Developer'},
-    {Name: 'Mahesh', Role:'React Stack'},
-  ]
+    { Name: 'Anand', Role: 'Developer' },
+    { Name: 'Adarsh', Role: 'MEAN Stack' },
+    { Name: 'Swati', Role: 'MERN Developer' },
+    { Name: 'Mahesh', Role: 'React Stack' },
+  ];
 
   playerName = 'Dhoni';
 
@@ -35,10 +35,10 @@ export class DirectiveComponent {
   //ngStyle
   myActivestyle = {
     // color: this.showValue ? 'red' : 'yellow'
-    'color': 'red',
+    color: 'red',
     'background-color': 'black',
-    'padding': '5px',
-    'margin': '5px 5px',
+    padding: '5px',
+    margin: '5px 5px',
   };
 
   // getStyles() {
@@ -48,20 +48,19 @@ export class DirectiveComponent {
   //   };
   // }
   myDisablestyle = {
-    'color': 'yellow',
+    color: 'yellow',
     'background-color': 'blue',
-    'padding': '5px',
-    'margin': '5px 5px',
+    padding: '5px',
+    margin: '5px 5px',
   };
-ngSwitch: any;
-//end ngStyle
+  ngSwitch: any;
+  //end ngStyle
 
   changeColor() {
     this.showValue = !this.showValue;
   }
 
-  showName(){
+  showName() {
     console.log(this.playerName);
   }
-
 }

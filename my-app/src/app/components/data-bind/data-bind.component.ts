@@ -17,13 +17,13 @@ export class DataBindComponent {
   lake = false;
   tree = false;
 
-  username: string = 'virat@kohli'
+  username: string = 'virat@kohli';
   playername: string = 'Virat Kohli';
   runs: number = 10000;
   innings: number = 204;
   myCol: any;
 
-  name:string='Aman'
+  name: string = 'Aman';
 
   avg() {
     let avarage: any;
@@ -51,5 +51,4 @@ export class DataBindComponent {
       this.tree = !this.tree; // fire
     }
   }
-  
 }

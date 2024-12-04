@@ -13,6 +13,10 @@ import { ParentComponent } from './components/parent/parent.component';
 import { ChildComponent } from './components/child/child.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
+import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
+import { TemplateFormComponent } from './components/template-form/template-form.component';
+import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
+import { FormComponent } from './components/form/form.component';
 
 
 
@@ -29,6 +33,10 @@ import { HomeComponent } from './components/home/home.component';
     ChildComponent,
     HeaderComponent,
     HomeComponent,
+    PagenotfoundComponent,
+    TemplateFormComponent,
+    ReactiveFormComponent,
+    FormComponent,
 
   ],
   imports: [
