@@ -11,6 +11,9 @@ import { PipeComponent } from './components/pipe/pipe.component';
 import { SquarePipe } from './pipes/square.pipe';
 import { ParentComponent } from './components/parent/parent.component';
 import { ChildComponent } from './components/child/child.component';
+import { HeaderComponent } from './components/header/header.component';
+import { HomeComponent } from './components/home/home.component';
+
 
 
 
@@ -24,6 +27,9 @@ import { ChildComponent } from './components/child/child.component';
     SquarePipe,
     ParentComponent,
     ChildComponent,
+    HeaderComponent,
+    HomeComponent,
+
   ],
   imports: [
     BrowserModule,
