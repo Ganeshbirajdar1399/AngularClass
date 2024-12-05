@@ -10,9 +10,13 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class FormComponent {
 constructor(private route:ActivatedRoute){} //dependency injection
-showValue(){
+showValue() {
 this.route.params.subscribe((p)=>{
   console.log(p['id'])
+})
+this.route.queryParamMap.subscribe((element)=>{
+console.log('fname from query: '+ element.get('fname'));
+console.log('role from query: '+ element.get('role'))
 })
 }
 }

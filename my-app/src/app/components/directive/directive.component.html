@@ -35,14 +35,15 @@
   <!--rendering multiple thinks-->
   <div class="bg-warning">
     <p><b>*ngfor</b></p>
-    <!-- <div class="exp">
-        <div *ngFor="let player of players">{{ player }}</div>
-      </div> -->
-    @for (player of players; track player) {
-    <p>List Of player: {{ player }}</p>
-    } @for (student of students; track student.Name+student.Role) {
-    <p>Student Name: {{ student.Name }} Role: {{ student.Role }}</p>
-    }
+    <div class="exp">
+      <div *ngFor="let player of players">{{ player }}</div>
+      <hr />
+      @for (player of players; track player) {
+      <p>List Of player: {{ player }}</p>
+      } @for (student of students; track student.Name+student.Role) {
+      <p>Student Name: {{ student.Name }} Role: {{ student.Role }}</p>
+      }
+    </div>
   </div>
   <hr />
   <div class="bg-info">

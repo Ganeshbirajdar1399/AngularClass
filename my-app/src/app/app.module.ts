@@ -21,6 +21,7 @@ import { FormComponent } from './components/form/form.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,6 @@ import { FormComponent } from './components/form/form.component';
     TemplateFormComponent,
     ReactiveFormComponent,
     FormComponent,
-
   ],
   imports: [
     BrowserModule,

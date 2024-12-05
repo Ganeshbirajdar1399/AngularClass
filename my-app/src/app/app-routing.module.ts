@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'child', component: ChildComponent },
   { path: 'parent', component: ParentComponent },
   { path: 'temp', component: TemplateFormComponent },
-  { path: 'pipes', redirectTo: 'parent' }, //redirect routing
+  // { path: 'pipes', redirectTo: 'parent' }, //redirect routing
   // {
   //   path: 'form',
   //   component: FormComponent,
@@ -37,8 +37,8 @@ const routes: Routes = [
   //child routing
 
   { path:'form/:id', component: FormComponent},
-  { path: '**', component: PagenotfoundComponent }, //wild routing
   { path: 'pipes', component: PipeComponent },
+  { path: '**', component: PagenotfoundComponent }, //wild routing
 ];
 
 @NgModule({
