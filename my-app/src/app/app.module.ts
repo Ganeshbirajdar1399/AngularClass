@@ -17,6 +17,10 @@ import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.co
 import { TemplateFormComponent } from './components/template-form/template-form.component';
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 import { FormComponent } from './components/form/form.component';
+import { BikeComponent } from './ass/bike/bike.component';
+import { MobilesComponent } from './ass/mobiles/mobiles.component';
+import { ElectronicsComponent } from './ass/electronics/electronics.component';
+import { AutomobileComponent } from './ass/automobile/automobile.component';
 
 
 
@@ -38,6 +42,10 @@ import { FormComponent } from './components/form/form.component';
     TemplateFormComponent,
     ReactiveFormComponent,
     FormComponent,
+    BikeComponent,
+    MobilesComponent,
+    ElectronicsComponent,
+    AutomobileComponent,
   ],
   imports: [
     BrowserModule,

@@ -11,6 +11,10 @@ import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.co
 import { TemplateFormComponent } from './components/template-form/template-form.component';
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 import { FormComponent } from './components/form/form.component';
+import { AutomobileComponent } from './ass/automobile/automobile.component';
+import { MobilesComponent } from './ass/mobiles/mobiles.component';
+import { BikeComponent } from './ass/bike/bike.component';
+import { ElectronicsComponent } from './ass/electronics/electronics.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },//default routing
@@ -19,6 +23,12 @@ const routes: Routes = [
   { path: 'child', component: ChildComponent },
   { path: 'parent', component: ParentComponent },
   { path: 'temp', component: TemplateFormComponent },
+  { path: 'react', component: ReactiveFormComponent },
+  // { path: 'Automobile', component: AutomobileComponent},
+  // { path: 'Mobiles', component: MobilesComponent},
+  // { path: 'Bikes', component: BikeComponent},
+  // { path: 'Electronics', component: ElectronicsComponent},
+  
   // { path: 'pipes', redirectTo: 'parent' }, //redirect routing
   // {
   //   path: 'form',
