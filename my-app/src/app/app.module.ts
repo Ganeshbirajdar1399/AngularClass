@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StyledirectveDirective } from './directives/styledirectve.directive';
 import { DataBindComponent } from './components/data-bind/data-bind.component';
 import { DirectiveComponent } from './components/directive/directive.component';
@@ -21,6 +21,7 @@ import { BikeComponent } from './ass/bike/bike.component';
 import { MobilesComponent } from './ass/mobiles/mobiles.component';
 import { ElectronicsComponent } from './ass/electronics/electronics.component';
 import { AutomobileComponent } from './ass/automobile/automobile.component';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -51,6 +52,9 @@ import { AutomobileComponent } from './ass/automobile/automobile.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
+    CommonModule,
+    BrowserModule
   ],
   providers: [
     provideAnimationsAsync()
