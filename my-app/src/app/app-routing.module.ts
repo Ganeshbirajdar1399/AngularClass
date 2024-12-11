@@ -15,6 +15,7 @@ import { AutomobileComponent } from './ass/automobile/automobile.component';
 import { MobilesComponent } from './ass/mobiles/mobiles.component';
 import { BikeComponent } from './ass/bike/bike.component';
 import { ElectronicsComponent } from './ass/electronics/electronics.component';
+import { ViewChildComponent } from './components/view-child/view-child.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },//default routing
@@ -48,6 +49,7 @@ const routes: Routes = [
 
   { path:'form/:id', component: FormComponent},
   { path: 'pipes', component: PipeComponent },
+  { path:'viewchild', component:ViewChildComponent},
   { path: '**', component: PagenotfoundComponent }, //wild routing
 ];
 

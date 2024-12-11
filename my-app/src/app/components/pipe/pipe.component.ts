@@ -11,4 +11,8 @@ export class PipeComponent {
   firstName = 'Anand';
   // currency = 3000
   date = new Date();
+
+  greetingFunction(){
+    console.log("greeting from pipes");
+  }
 }

@@ -22,6 +22,7 @@ import { MobilesComponent } from './ass/mobiles/mobiles.component';
 import { ElectronicsComponent } from './ass/electronics/electronics.component';
 import { AutomobileComponent } from './ass/automobile/automobile.component';
 import { CommonModule } from '@angular/common';
+import { ViewChildComponent } from './components/view-child/view-child.component';
 
 
 
@@ -47,6 +48,7 @@ import { CommonModule } from '@angular/common';
     MobilesComponent,
     ElectronicsComponent,
     AutomobileComponent,
+    ViewChildComponent,
   ],
   imports: [
     BrowserModule,

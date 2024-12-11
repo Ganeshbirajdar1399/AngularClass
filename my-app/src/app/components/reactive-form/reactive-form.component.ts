@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-form',
@@ -11,14 +11,23 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 export class ReactiveFormComponent {
    isSubmitted= false;
-  myForm = new FormGroup({
-    fname: new FormControl('', [
-      Validators.required,
-      Validators.minLength(3),
-    ]),
-    email: new FormControl('', [Validators.email, Validators.required]),
-  });
+  // myForm = new FormGroup({
+  //   fname: new FormControl('', [
+  //     Validators.required,
+  //     Validators.minLength(3),
+  //   ]),
+  //   email: new FormControl('', [Validators.email, Validators.required]),
+  // });
  
+  myForm: FormGroup
+  
+  constructor(private fb:FormBuilder){
+this.myForm = this.fb.group({
+  fname: ['', [Validators.required,Validators.minLength(3)]],
+  email:['', [Validators.email,Validators.required]],
+  mobileno: ['', [Validators.pattern('[0-9]{10}')]]
+})
+  }
 
   OnSubmit() {
     if (this.myForm.valid) {
