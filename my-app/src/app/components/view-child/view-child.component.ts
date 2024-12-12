@@ -14,8 +14,9 @@ export class ViewChildComponent {
   @ViewChild('pipeComp') pipeComp !: PipeComponent
 
   changeText(){
-    this.hellodiv.nativeElement.innerText ='text changed'
-    this.hellodiv.nativeElement.style.color ='red'
+    this.hellodiv.nativeElement.innerText = 'text changed';
+    this.hellodiv.nativeElement.style.color = 'red';
+    this.hellodiv.nativeElement.style.fontStyle = 'italic';
   }  
   callPipeFunc(){
     this.pipeComp.greetingFunction()

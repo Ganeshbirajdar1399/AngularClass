@@ -1,6 +1,10 @@
-<p>view-child works!</p>
-
-<p #changetext>View child</p>
-<button (click)="changeText()">change text</button>
-<app-pipe #pipeComp></app-pipe>
-<button (click)="callPipeFunc()">Call Pipe Func</button>
+<div class="container">
+  <h4>view-child works!</h4>
+  <hr />
+  <p>Change text using view-child decorator</p>
+  <hr>
+  <p #changetext> <i>View child</i></p>
+  <button  class="btn btn-primary" (click)="changeText()"> change text</button>
+  <app-pipe #pipeComp></app-pipe>
+  <button class="btn btn-info" (click)="callPipeFunc()">Call Pipe Func</button>
+</div>

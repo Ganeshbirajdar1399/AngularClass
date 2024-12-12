@@ -23,6 +23,8 @@ import { ElectronicsComponent } from './ass/electronics/electronics.component';
 import { AutomobileComponent } from './ass/automobile/automobile.component';
 import { CommonModule } from '@angular/common';
 import { ViewChildComponent } from './components/view-child/view-child.component';
+import { UserdataComponent } from './components/userdata/userdata.component';
+import { provideHttpClient } from '@angular/common/http';
 
 
 
@@ -49,6 +51,7 @@ import { ViewChildComponent } from './components/view-child/view-child.component
     ElectronicsComponent,
     AutomobileComponent,
     ViewChildComponent,
+    UserdataComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,10 +59,13 @@ import { ViewChildComponent } from './components/view-child/view-child.component
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
-    BrowserModule
+    BrowserModule,
+    
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    provideHttpClient()
+
   ],
   bootstrap: [AppComponent]
 })
