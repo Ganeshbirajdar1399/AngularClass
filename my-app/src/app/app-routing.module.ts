@@ -51,7 +51,7 @@ const routes: Routes = [
   { path:'form/:id', component: FormComponent},
   { path: 'pipes', component: PipeComponent },
   { path:'viewchild', component:ViewChildComponent},
-  { path:'user', component:UserdataComponent},
+  { path:'servicedata', component:UserdataComponent},
   { path: '**', component: PagenotfoundComponent }, //wild routing
 ];
 
