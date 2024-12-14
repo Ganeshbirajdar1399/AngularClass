@@ -9,7 +9,9 @@ import { UsersService } from '../../services/users.service';
   templateUrl: './userdata.component.html',
   styleUrl: './userdata.component.css',
 })
-export class UserdataComponent {
+export class UserdataComponent
+
+{
   data: any;
   quotes: any[] = [];
   posts: any;
@@ -22,6 +24,14 @@ export class UserdataComponent {
   loadData() {
     this.data = this.userdata.getStaticData();
     // console.log(this.data)
+  }
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+    this.loadData();
+    this.fromServer();
+    this.postsFromDbjson();
+
   }
 
   fromServer() {
@@ -39,4 +49,6 @@ export class UserdataComponent {
       this.posts = response;
     });
   }
+
+  
 }

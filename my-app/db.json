@@ -1,10 +1,51 @@
 {
-    "posts": [
-      { "id": "1", "title": "a title", "views": 100 },
-      { "id": "2", "title": "another title", "views": 200 },
-      { "id": "3", "title": "a title", "views": 100 },
-      { "id": "4", "title": "another title", "views": 200 },
-      { "id": "5", "title": "a title", "views": 100 },
-      { "id": "6", "title": "another title", "views": 200 }
-    ]
-  }
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "id": "3",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "4",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "id": "5",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "6",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "Updated revas",
+      "role": "Updataed revs"
+    },
+    {
+      "id": "2",
+      "name": "Ram",
+      "role": "MERN developer"
+    },
+    {
+      "id": "3",
+      "name": "Subhash",
+      "role": "Trainer developer"
+    }
+  ]
+}

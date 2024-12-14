@@ -17,6 +17,7 @@ import { BikeComponent } from './ass/bike/bike.component';
 import { ElectronicsComponent } from './ass/electronics/electronics.component';
 import { ViewChildComponent } from './components/view-child/view-child.component';
 import { UserdataComponent } from './components/userdata/userdata.component';
+import { CrudComponent } from './components/crud/crud.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },//default routing
@@ -52,6 +53,7 @@ const routes: Routes = [
   { path: 'pipes', component: PipeComponent },
   { path:'viewchild', component:ViewChildComponent},
   { path:'servicedata', component:UserdataComponent},
+  { path:'crud', component:CrudComponent},
   { path: '**', component: PagenotfoundComponent }, //wild routing
 ];
 

@@ -24,7 +24,8 @@ import { AutomobileComponent } from './ass/automobile/automobile.component';
 import { CommonModule } from '@angular/common';
 import { ViewChildComponent } from './components/view-child/view-child.component';
 import { UserdataComponent } from './components/userdata/userdata.component';
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withFetch } from '@angular/common/http';
+import { CrudComponent } from './components/crud/crud.component';
 
 
 
@@ -52,6 +53,7 @@ import { provideHttpClient } from '@angular/common/http';
     AutomobileComponent,
     ViewChildComponent,
     UserdataComponent,
+    CrudComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,7 +66,8 @@ import { provideHttpClient } from '@angular/common/http';
   ],
   providers: [
     provideAnimationsAsync(),
-    provideHttpClient()
+    provideHttpClient(withFetch())
+    
 
   ],
   bootstrap: [AppComponent]

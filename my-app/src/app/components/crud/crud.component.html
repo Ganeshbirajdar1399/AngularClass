@@ -1,0 +1,68 @@
+<div class="container-fluid mt-4">
+  <div class="container">
+    <form (ngSubmit)="addData()" class="border border-1 border-primary p-3">
+      <h3 class="text-center">Users Data</h3>
+      <label class="form-label" for="">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        name="name"
+        id="name"
+        id="name"
+        [(ngModel)]="formData.name"
+        placeholder="Enter Name"
+        required
+        autocomplete="off"
+      />
+      <label class="form-label" for="">Role</label>
+      <input
+        type="text"
+        class="form-control"
+        name="role"
+        id="role"
+        [(ngModel)]="formData.role"
+        placeholder="Enter Role"
+        required
+        autocomplete="off"
+      />
+      <div class="d-flex justify-content-start pt-3">
+        <button type="submit" class="btn btn-success">Submit</button>
+      </div>
+    </form>
+    <div class="pt-3" *ngIf="isSubmited">
+      <p class="alert bg-success text-light">User added successfully</p>
+    </div>
+ 
+  <div class="container">
+    <button class="btn btn-primary mt-2" (click)="fetchData()">
+      Get data
+    </button>
+    <table class="table table-striped table-primary border border-black mt-3">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Role</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of userData">
+          <td>
+            {{ user.id }}
+          </td>
+          <td>
+            {{ user.name }}
+          </td>
+          <td>
+            {{ user.role }}
+          </td>
+          <td>
+            <button class="btn btn-info" (click)="editUser(user)">Edit</button>
+            <button class="btn btn-danger ms-2" (click)="deleteUser(user.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
