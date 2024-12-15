@@ -10,6 +10,7 @@ import { UsersService } from '../../services/users.service';
 export class CrudComponent {
   userData: any;
   isSubmited = false;
+  isSubmitedupd = false;
 
   formData: { id?: string; name: string; role: string } = {
     name: '',
@@ -34,12 +35,12 @@ export class CrudComponent {
         .updateUser(this.formData, this.formData.id)
         .subscribe((res) => {
           console.log('Update data successfully', res);
-          this.clearForm;
-          this.isSubmited = true;
+          this.clearForm();
+          this.isSubmitedupd = true;
           setTimeout(() => {
-            this.isSubmited = false;
+            this.isSubmitedupd = false;
           }, 2000);
-          this.fetchData;
+          this.fetchData();
         });
     } else {
       this.userService.insertData(this.formData).subscribe((res) => {
@@ -60,14 +61,15 @@ export class CrudComponent {
       this.fetchData();
     });
   }
+
+
   editUser(userData: any) {
-    this.formData = userData;
-    // this.userService.updateUser(this.formData, id).subscribe((res)=>{
-    // console.log('Update data successfully', res);
-    // this.fetchData;
-    // this.clearForm;
-    // });
+    this.formData = { ...userData }; // Create a copy of the user object
   }
+  
+//this.formData = { ...userData }; // Creates a shallow copy
+//this.formData is a new object with the same properties but independent of userData.
+//Changes to form inputs do not affect the original userData in the table.
 
   clearForm(): void {
     this.formData = {

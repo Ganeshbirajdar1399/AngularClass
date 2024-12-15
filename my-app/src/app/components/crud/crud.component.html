@@ -29,9 +29,16 @@
         <button type="submit" class="btn btn-success">Submit</button>
       </div>
     </form>
-    <div class="pt-3" *ngIf="isSubmited">
-      <p class="alert bg-success text-light">User added successfully</p>
-    </div>
+    @if(isSubmited){
+      <div class="pt-3">
+        <p class="alert bg-success text-light">User added successfully</p>
+      </div>
+    }@else if(isSubmitedupd) {
+      <div class="pt-3">
+        <p class="alert bg-success text-light">Update User successfully</p>
+      </div>
+    }
+    
  
   <div class="container">
     <button class="btn btn-primary mt-2" (click)="fetchData()">
