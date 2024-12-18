@@ -26,6 +26,8 @@ import { ViewChildComponent } from './components/view-child/view-child.component
 import { UserdataComponent } from './components/userdata/userdata.component';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { CrudComponent } from './components/crud/crud.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -54,6 +56,7 @@ import { CrudComponent } from './components/crud/crud.component';
     ViewChildComponent,
     UserdataComponent,
     CrudComponent,
+    PaginationComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,7 +65,7 @@ import { CrudComponent } from './components/crud/crud.component';
     ReactiveFormsModule,
     CommonModule,
     BrowserModule,
-    
+    NgxPaginationModule 
   ],
   providers: [
     provideAnimationsAsync(),
