@@ -28,6 +28,8 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
 import { CrudComponent } from './components/crud/crud.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
@@ -57,6 +59,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     UserdataComponent,
     CrudComponent,
     PaginationComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -65,7 +68,9 @@ import { NgxPaginationModule } from 'ngx-pagination';
     ReactiveFormsModule,
     CommonModule,
     BrowserModule,
-    NgxPaginationModule 
+    NgxPaginationModule,
+    MatButtonModule ,
+    MatDialogModule 
   ],
   providers: [
     provideAnimationsAsync(),

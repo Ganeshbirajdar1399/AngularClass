@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-reactive-form',
@@ -21,7 +23,7 @@ export class ReactiveFormComponent {
  
   myForm: FormGroup
   
-  constructor(private fb:FormBuilder){
+  constructor(private fb:FormBuilder, private authService: AuthService,private router:Router){
 this.myForm = this.fb.group({
   fname: ['', [Validators.required,Validators.minLength(3)]],
   email:['', [Validators.email,Validators.required]],
@@ -31,6 +33,7 @@ this.myForm = this.fb.group({
 
   OnSubmit() {
     if (this.myForm.valid) {
+      this.authService.isLoggedIn();
       console.log(this.myForm.value, 'value of reactive form ');
       this.isSubmitted = true;
     } else {

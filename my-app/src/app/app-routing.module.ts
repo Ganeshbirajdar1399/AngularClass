@@ -19,25 +19,53 @@ import { ViewChildComponent } from './components/view-child/view-child.component
 import { UserdataComponent } from './components/userdata/userdata.component';
 import { CrudComponent } from './components/crud/crud.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
+import { authGuard } from './guards/auth.guard';
+import { HeaderComponent } from './components/header/header.component';
+import { homedir } from 'node:os';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },//default routing
-  { path: 'directive', component: DirectiveComponent },//name routing
-  { path: 'databind', component: DataBindComponent },
-  { path: 'child', component: ChildComponent },
-  { path: 'parent', component: ParentComponent },
-  { path: 'temp', component: TemplateFormComponent },
-  { path: 'react', component: ReactiveFormComponent },
+  { path: '', component: ReactiveFormComponent }, //default routing
+  { path: 'home', canActivate: [authGuard], component: HomeComponent },
+  {
+    path: 'directive',
+    canActivate: [authGuard],
+    component: DirectiveComponent,
+  }, //name routing
+  { path: 'databind', canActivate: [authGuard], component: DataBindComponent },
+  { path: 'child', canActivate: [authGuard], component: ChildComponent },
+  { path: 'parent', canActivate: [authGuard], component: ParentComponent },
+  { path: 'temp', canActivate: [authGuard], component: TemplateFormComponent },
+  { path: 'react', canActivate: [authGuard], component: ReactiveFormComponent },
+  { path: 'form/:id', canActivate: [authGuard], component: FormComponent },
+  { path: 'pipes', canActivate: [authGuard], component: PipeComponent },
+  {
+    path: 'viewchild',
+    canActivate: [authGuard],
+    component: ViewChildComponent,
+  },
+  {
+    path: 'servicedata',
+    canActivate: [authGuard],
+    component: UserdataComponent,
+  },
+  { path: 'crud', component: CrudComponent },
+  {
+    path: 'pagination',
+    canActivate: [authGuard],
+    component: PaginationComponent,
+  },
+  { path: '**', component: PagenotfoundComponent }, //wild routing
+
   // { path: 'Automobile', component: AutomobileComponent},
   // { path: 'Mobiles', component: MobilesComponent},
   // { path: 'Bikes', component: BikeComponent},
   // { path: 'Electronics', component: ElectronicsComponent},
-  
+
   // { path: 'pipes', redirectTo: 'parent' }, //redirect routing
   // {
   //   path: 'form',
   //   component: FormComponent,
-  //   children:[ 
+  //   children:[
   //     {
   //       path: 'temp',
   //       component: TemplateFormComponent,
@@ -49,14 +77,6 @@ const routes: Routes = [
   //   ],
   // },
   //child routing
-
-  { path:'form/:id', component: FormComponent},
-  { path: 'pipes', component: PipeComponent },
-  { path:'viewchild', component:ViewChildComponent},
-  { path:'servicedata', component:UserdataComponent},
-  { path:'crud', component:CrudComponent},
-  { path:'pagination', component:PaginationComponent},
-  { path: '**', component: PagenotfoundComponent }, //wild routing
 ];
 
 @NgModule({

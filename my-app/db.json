@@ -123,11 +123,6 @@
   ],
   "users": [
     {
-      "id": "1",
-      "name": "dddd",
-      "role": "ccccc"
-    },
-    {
       "id": "2",
       "name": "Ram sada",
       "role": "MERN developer"
@@ -138,19 +133,9 @@
       "role": "Trainer developer"
     },
     {
-      "id": "847a",
-      "name": "qqqqqqqq",
-      "role": "aaaaaaaaqqqqqqqqq"
-    },
-    {
-      "id": "5b4d",
-      "name": "aaaa",
-      "role": "aaaa"
-    },
-    {
-      "id": "1edd",
-      "username": "testuser",
-      "password": "password123"
+      "id": "2",
+      "name": "Ram sada",
+      "role": "MERN developer"
     }
   ]
 }

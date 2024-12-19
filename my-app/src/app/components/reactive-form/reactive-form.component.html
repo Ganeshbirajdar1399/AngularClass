@@ -14,7 +14,11 @@
       <input id="fname" formControlName="fname" class="form-control" />
     </div>
     <div>
-      <small class="text-danger" *ngIf="myForm.controls['fname'].invalid && myForm.controls['fname'].touched "
+      <small
+        class="text-danger"
+        *ngIf="
+          myForm.controls['fname'].invalid && myForm.controls['fname'].touched
+        "
         >First name is invalid</small
       >
     </div>
@@ -23,17 +27,29 @@
       <input id="email" formControlName="email" class="form-control" />
     </div>
     <div>
-      <small class="text-danger" *ngIf="myForm.get('email')?.invalid && myForm.get('email')?.touched"
+      <small
+        class="text-danger"
+        *ngIf="myForm.get('email')?.invalid && myForm.get('email')?.touched"
         >email is invalid</small
       >
     </div>
 
     <div class="mb-3">
       <label for="fname">Mobile No.</label>
-      <input id="mobileno" formControlName="mobileno" class="form-control" maxlength="10" />
+      <input
+        id="mobileno"
+        formControlName="mobileno"
+        class="form-control"
+        maxlength="10"
+      />
     </div>
     <div>
-      <small class="text-danger" *ngIf="myForm.controls['mobileno'].invalid && myForm.controls['mobileno'].touched "
+      <small
+        class="text-danger"
+        *ngIf="
+          myForm.controls['mobileno'].invalid &&
+          myForm.controls['mobileno'].touched
+        "
         >mobile number is invalid mobile no should be 10 digit</small
       >
     </div>
@@ -44,5 +60,5 @@
 </div>
 
 <div *ngIf="isSubmitted" class="alert alert-success mt-3">
-  Form submited successfully
+  Loggedin Successfully
 </div>
