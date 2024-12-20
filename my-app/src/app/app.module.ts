@@ -30,6 +30,8 @@ import { PaginationComponent } from './components/pagination/pagination.componen
 import { NgxPaginationModule } from 'ngx-pagination';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
+import { SearchUsersPipe } from './pipes/search-users.pipe';
+import { OrderPipePipe } from './pipes/order-pipe.pipe';
 
 
 
@@ -59,6 +61,8 @@ import { MatButtonModule } from '@angular/material/button';
     UserdataComponent,
     CrudComponent,
     PaginationComponent,
+    SearchUsersPipe,
+    OrderPipePipe,
 
   ],
   imports: [

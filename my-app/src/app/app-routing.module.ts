@@ -51,7 +51,6 @@ const routes: Routes = [
   { path: 'crud', component: CrudComponent },
   {
     path: 'pagination',
-    canActivate: [authGuard],
     component: PaginationComponent,
   },
   { path: '**', component: PagenotfoundComponent }, //wild routing
