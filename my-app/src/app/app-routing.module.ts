@@ -45,7 +45,6 @@ const routes: Routes = [
   },
   {
     path: 'servicedata',
-    canActivate: [authGuard],
     component: UserdataComponent,
   },
   { path: 'crud', component: CrudComponent },

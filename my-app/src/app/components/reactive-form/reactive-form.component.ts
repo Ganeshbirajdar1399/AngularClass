@@ -1,34 +1,40 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
+import { LocalStorageService } from '../../services/services/local-storage.service';
+import { tick } from '@angular/core/testing';
 
 @Component({
   selector: 'app-reactive-form',
   standalone: false,
-  
-  templateUrl: './reactive-form.component.html',
-  styleUrl: './reactive-form.component.css'
-})
 
-export class ReactiveFormComponent {
-   isSubmitted= false;
-  // myForm = new FormGroup({
-  //   fname: new FormControl('', [
-  //     Validators.required,
-  //     Validators.minLength(3),
-  //   ]),
-  //   email: new FormControl('', [Validators.email, Validators.required]),
-  // });
- 
-  myForm: FormGroup
-  
-  constructor(private fb:FormBuilder, private authService: AuthService,private router:Router){
-this.myForm = this.fb.group({
-  fname: ['', [Validators.required,Validators.minLength(3)]],
-  email:['', [Validators.email,Validators.required]],
-  mobileno: ['', [Validators.pattern('[0-9]{10}')]]
+  templateUrl: './reactive-form.component.html',
+  styleUrl: './reactive-form.component.css',
 })
+export class ReactiveFormComponent {
+  isSubmitted = false;
+
+  USER_Key = 'user';
+
+  myForm: FormGroup;
+
+  constructor(
+    private fb: FormBuilder,
+    private authService: AuthService,
+    private router: Router,
+    private localService: LocalStorageService
+  ) {
+    this.myForm = this.fb.group({
+      fname: ['', [Validators.required, Validators.minLength(3)]],
+      email: ['', [Validators.email, Validators.required]],
+      mobileno: ['', [Validators.pattern('[0-9]{10}')]],
+    });
   }
 
   OnSubmit() {
@@ -43,5 +49,21 @@ this.myForm = this.fb.group({
       this.isSubmitted = false;
     }, 2000);
   }
-  
+  saveData() {
+    this.localService.setItem(this.USER_Key, { fname: 'xyz', id: 1001 });
+    console.log('loacal storage data save');
+  }
+  getData() {
+    const userData = this.localService.getItem(this.USER_Key);
+    console.log('loacal storage data: ', userData);
+  }
+  clearData() {
+    this.localService.clearData(this.USER_Key);
+    console.log('loacal storage data clear single');
+  }
+
+  clearAllData() {
+    this.localService.clearAll();
+    console.log('loacal storage clear all data');
+  }
 }

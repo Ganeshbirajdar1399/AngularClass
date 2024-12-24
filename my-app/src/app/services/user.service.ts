@@ -19,6 +19,9 @@ export class UserService {
   }
 
   getPostData(): Observable<any>{
-return this.http.get('http://localhost:3000/customers')
+return this.http.get('http://localhost:3000/posts')
   }
+  getCustomerData(): Observable<any>{
+    return this.http.get('http://localhost:3000/customers')
+      }
 }

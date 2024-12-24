@@ -11,7 +11,7 @@ import { UserService } from '../../services/user.service';
 export class PaginationComponent {
   //search and sort variables
   searchText = '';
-  orderColumn:string = 'name';
+  orderColumn: string = 'name';
   isAsc: boolean = true;
 
   //pagination variables
@@ -26,7 +26,7 @@ export class PaginationComponent {
   }
 
   getData() {
-    this.authService.getPostData().subscribe((res) => {
+    this.authService.getCustomerData().subscribe((res) => {
       this.data = res;
       console.log('results', res);
     });
@@ -35,7 +35,7 @@ export class PaginationComponent {
   orderSort(field: string) {
     if (this.orderColumn === field) {
       this.isAsc = !this.isAsc; // Toggle order if sorting the same field
-    }else {
+    } else {
       this.orderColumn = field;
       this.isAsc = true; // Default to ascending for a new field
     }
