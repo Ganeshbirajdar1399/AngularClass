@@ -9,6 +9,7 @@ import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 import { LocalStorageService } from '../../services/services/local-storage.service';
 import { tick } from '@angular/core/testing';
+import { SessionStorageService } from '../../services/services/session-storage.service';
 
 @Component({
   selector: 'app-reactive-form',
@@ -21,6 +22,7 @@ export class ReactiveFormComponent {
   isSubmitted = false;
 
   USER_Key = 'user';
+  MOBILE_KEY = 'mobileNo';
 
   myForm: FormGroup;
 
@@ -28,7 +30,8 @@ export class ReactiveFormComponent {
     private fb: FormBuilder,
     private authService: AuthService,
     private router: Router,
-    private localService: LocalStorageService
+    private localService: LocalStorageService,
+    private sessionStorage: SessionStorageService
   ) {
     this.myForm = this.fb.group({
       fname: ['', [Validators.required, Validators.minLength(3)]],
@@ -51,19 +54,25 @@ export class ReactiveFormComponent {
   }
   saveData() {
     this.localService.setItem(this.USER_Key, { fname: 'xyz', id: 1001 });
+    this.sessionStorage.setItem(this.MOBILE_KEY, { mobileNo: 9900887766 });
     console.log('loacal storage data save');
+    console.log('session storage data save');
   }
   getData() {
     const userData = this.localService.getItem(this.USER_Key);
+    const userSessionData = this.sessionStorage.getItem(this.MOBILE_KEY);
     console.log('loacal storage data: ', userData);
+    console.log('session storage data: ', userSessionData);
   }
   clearData() {
     this.localService.clearData(this.USER_Key);
+    this.sessionStorage.clearData(this.MOBILE_KEY);
     console.log('loacal storage data clear single');
   }
 
   clearAllData() {
     this.localService.clearAll();
+    this.sessionStorage.clearAll();
     console.log('loacal storage clear all data');
   }
 }
