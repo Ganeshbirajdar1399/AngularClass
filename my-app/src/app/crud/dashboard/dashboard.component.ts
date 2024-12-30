@@ -8,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent {
+  userName='Anil';
+  showValue = false;
+  
 
+  toggle(){
+this.showValue = !this.showValue
+  }
 }
