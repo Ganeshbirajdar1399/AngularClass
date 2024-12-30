@@ -49,11 +49,13 @@ const routes: Routes = [
   },
   { path: 'crud', component: CrudComponent },
   {
-    path: 'pagination', component:PaginationComponent
+    path: 'pagination',
+    component: PaginationComponent,
   },
   // loadComponent : ()=> import('./components/pagination/pagination.component').then((m) => m.PaginationComponent),
   {
-path:'customModule', loadChildren : ()=> import('./crud/crud.module').then((m)=>m.CrudModule),
+    path: 'customModule',
+    loadChildren: () => import('./crud/crud.module').then((m) => m.CrudModule),
   },
   { path: '**', component: PagenotfoundComponent }, //wild routing
 

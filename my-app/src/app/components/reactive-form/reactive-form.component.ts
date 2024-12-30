@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 import { LocalStorageService } from '../../services/services/local-storage.service';
 import { tick } from '@angular/core/testing';
 import { SessionStorageService } from '../../services/services/session-storage.service';
+import { LoginServiceService } from '../../services/services/login-service.service';
+import { timeStamp } from 'console';
 
 @Component({
   selector: 'app-reactive-form',
@@ -31,13 +33,21 @@ export class ReactiveFormComponent {
     private authService: AuthService,
     private router: Router,
     private localService: LocalStorageService,
-    private sessionStorage: SessionStorageService
+    private sessionStorage: SessionStorageService,
+    private loginService: LoginServiceService
   ) {
     this.myForm = this.fb.group({
       fname: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.email, Validators.required]],
       mobileno: ['', [Validators.pattern('[0-9]{10}')]],
     });
+  }
+
+  onLogin(){
+    const user = {username: "anand kumar",password: "ssss",id: "as12"}
+    this.loginService.setLogin(user);
+    alert(`${user.username}, logged in successfully`);
+    this.router.navigate(['/pagination']);
   }
 
   OnSubmit() {

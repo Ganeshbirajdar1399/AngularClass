@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { UserService } from '../../services/user.service';
+import { LoginServiceService } from '../../services/services/login-service.service';
 
 @Component({
   selector: 'app-pagination',
@@ -19,10 +20,12 @@ export class PaginationComponent {
   itemsPerPage = 15; // Default items per page
 
   data!: any[];
-  constructor(private authService: UserService) {}
+  constructor(private authService: UserService, private loginService:LoginServiceService) {}
 
+  currentUser:any;
   ngOnInit(): void {
     this.getData();
+this.currentUser = this.loginService.getLogin();
   }
 
   getData() {
