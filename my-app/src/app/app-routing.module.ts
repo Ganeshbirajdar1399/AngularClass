@@ -22,6 +22,7 @@ import { PaginationComponent } from './components/pagination/pagination.componen
 import { authGuard } from './guards/auth.guard';
 import { HeaderComponent } from './components/header/header.component';
 import { homedir } from 'node:os';
+import { PrimenumberComponent } from './components/primenumber/primenumber.component';
 
 const routes: Routes = [
   { path: '', component: ReactiveFormComponent }, //default routing
@@ -51,6 +52,10 @@ const routes: Routes = [
   {
     path: 'pagination',
     component: PaginationComponent,
+  },
+  {
+    path: 'prime',
+    component: PrimenumberComponent,
   },
   // loadComponent : ()=> import('./components/pagination/pagination.component').then((m) => m.PaginationComponent),
   {

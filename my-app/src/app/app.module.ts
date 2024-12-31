@@ -32,6 +32,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { SearchUsersPipe } from './pipes/search-users.pipe';
 import { OrderPipePipe } from './pipes/order-pipe.pipe';
+import { PrimenumberComponent } from './components/primenumber/primenumber.component';
 
 
 
@@ -63,6 +64,7 @@ import { OrderPipePipe } from './pipes/order-pipe.pipe';
     PaginationComponent,
     SearchUsersPipe,
     OrderPipePipe,
+    PrimenumberComponent,
 
   ],
   imports: [
